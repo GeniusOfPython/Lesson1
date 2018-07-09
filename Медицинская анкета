@@ -1,0 +1,83 @@
+print("Добрый день! Спасибо, что воспользовались услугами нашей компании.")
+print("Заполните анкету, и мы сможем подобрать Вам необходимые рекомендации!")
+
+
+name = input("Введите Ваше имя:")
+
+
+surename = input("Введите Вашу фамилию:")
+
+while True:
+    try:
+        age = int(input("Ваш возраст:"))
+        break
+    except (TypeError, ValueError):
+        print("Введите целое число!")
+
+while True:
+    try:
+        weight = int(input("Ваш вес:"))
+        break
+    except (TypeError, ValueError):
+        print("Введите целое число!")
+
+
+odd_1 = [1, 21, 31, 41, 51, 61, 71, 81, 91]     #Этот список и список ниже необходимы
+# для правильного отображения "год", "года", "лет".
+odd_2 = [2, 3, 4, 22, 23, 24, 32, 33, 34, 42, 43, 44, 52, 53, 54,
+    62, 63, 64, 72, 73, 74, 82, 83, 84, 92, 93, 94]
+
+
+if age <10 and weight > 70:
+    print("Серьезно, не пытайся сломать мою программу!")
+elif age >10 and weight < 10:
+    print("Серьезно, не пытайся сломать мою программу!")
+elif age <= 30 and weight >=50 and weight <=120:
+    if age in odd_1:
+        print(name, surename + ",", age, "год,", "вес" + ",", weight, "- хорошее состояние")
+    elif age in odd_2:
+        print(name, surename + ",", age, "года,", "вес", weight, "- хорошее состояние")
+    else:
+        print(name, surename + ",", age, "лет,", "вес", weight, "- хорошее состояние")
+elif age in range(31, 39) and weight in range(51, 119):
+    if age in odd_1:
+        print(name, surename + ",", age, "год,", "вес" + ",", weight, "- хорошее состояние")
+    elif age in odd_2:
+        print(name, surename + ",", age, "года,", "вес", weight, "- хорошее состояние")
+    else:
+        print(name, surename + ",", age, "лет,", "вес", weight, "- хорошее состояние")
+elif age >=40 and weight in range(51, 119):
+    if age in odd_1:
+        print(name, surename + ",", age, "год,", "вес" + ",", weight, "- хорошее состояние")
+    elif age in odd_2:
+        print(name, surename + ",", age, "года,", "вес", weight, "- хорошее состояние")
+    else:
+        print(name, surename + ",", age, "лет,", "вес", weight, "- хорошее состояние")
+elif age in range(31, 39) and weight <= 50:
+    if age in odd_1:
+        print(name, surename + ",", age, "год,", "вес" + ",", weight, "- следует заняться собой")
+    elif age in odd_2:
+        print(name, surename + ",", age, "года,", "вес", weight, "- следует заняться собой")
+    else:
+        print(name, surename + ",", age, "лет,", "вес", weight, "- следует заняться собой")
+elif age in range(31, 39) and weight >= 120:
+    if age in odd_1:
+        print(name, surename + ",", age, "год,", "вес" + ",", weight, "- следует заняться собой")
+    elif age in odd_2:
+        print(name, surename + ",", age, "года,", "вес", weight, "- следует заняться собой")
+    else:
+        print(name, surename + ",", age, "лет,", "вес", weight, "- следует заняться собой")
+elif age >= 40 and weight <= 50:
+    if age in odd_1:
+        print(name, surename + ",", age, "год,", "вес" + ",", weight, "- следует обратиться к врачу!")
+    elif age in odd_2:
+        print(name, surename + ",", age, "года,", "вес", weight, "- следует обратиться к врачу!")
+    else:
+        print(name, surename + ",", age, "лет,", "вес", weight, "- следует обратиться к врачу!")
+elif age >= 40 and weight >= 120:
+    if age in odd_1:
+        print(name, surename + ",", age, "год,", "вес" + ",", weight, "- следует обратиться к врачу!")
+    elif age in odd_2:
+        print(name, surename + ",", age, "года,", "вес", weight, "- следует обратиться к врачу!")
+    else:
+        print(name, surename + ",", age, "лет,", "вес", weight, "- следует обратиться к врачу!")
